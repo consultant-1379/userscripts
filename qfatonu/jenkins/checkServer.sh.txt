@@ -1,0 +1,63 @@
+#!/bin/bash
+#####################################################################
+# File Name    : checkServer.sh 
+# Version      : 1.01
+# Author       : Fatih ONUR
+# Description  : Pre check NETSim server for Uptime, Memory, Free Ipv4/Ipv6 Addr
+#   , Num of CPU, OS Patches etc
+# Date Created : 2016.11.24
+#####################################################################
+
+HOSTNAME=`hostname`
+
+echo "## UPTIME on $HOSTNAME ##"
+echo `uptime`
+MSG="FAILED: Uptime is more than maximum 5 days. Currently uptime days:"
+OUTPUT=`uptime | \
+perl -lne '$days=0;if(/(\d+)\sdays/){$days=$1};END{if($days>5){print "'"${MSG}"' $days\n"}else{print "PASSED: Uptime is OK"}}'`
+echo "$OUTPUT"
+
+echo "## RAM SPEC on $HOSTNAME ##"
+echo "`free -g`"
+MSG="FAILED: RAM is less than 63"
+OUTPUT=`free -g | \
+free -g | grep -i mem | perl -lne '$mem=0;if(/(\d+)/){$mem=$1};if($mem<63){print "'"$MSG"'\n"}else{print "PASSED: RAM is OK\n"}'`
+echo "$OUTPUT"
+
+echo "## NUM OF CPU on $HOSTNAME ##"
+echo `nproc`
+MSG="FAILED: Nummber of CPU is less than 6"
+OUTPUT=`nproc | \
+perl -lne 'if($_<6){print "'"${MSG}"'"}else{print "PASSED: CPU num is OK \n"}'`
+echo "$OUTPUT"
+
+echo "## IPV4 ADDR on $HOSTNAME ##"
+OUTPUT=`ip -4 a | grep "inet " | wc -l`
+echo "$OUTPUT"
+MSG="FAILED: Nummber of IPV4 addr is less than 2000. Currently nummber of IPV4 addr:"
+OUTPUT=`echo $OUTPUT | perl -lne 'if($_<2000){print "'"${MSG}"' $_"}else{print "PASSED: IPV4 addr is OK"}'`
+echo "$OUTPUT"
+
+echo "## IPV6 ADDR on $HOSTNAME ##"
+OUTPUT=`ip -6 a | grep "inet6" | wc -l`
+echo "$OUTPUT"
+MSG="FAILED: Nummber of IPV6 addr is less than 2000"
+OUTPUT=`echo $OUTPUT | perl -lne 'if($_<2000){print "'"${MSG}"'"}else{print "PASSED: IPV6 addr is OK"}'`
+echo "$OUTPUT"
+
+echo "## KERNEL PATCH CHECK|FIX:scheduler on $HOSTNAME ##"
+OUTPUT=`cat /sys/block/sda/queue/scheduler | \
+perl -ne '$_=~ s/^\s+|\s+$//g; if($_ ne "[noop] deadline cfq")'\
+'{print "FIXING: scheduler patch issue \n";system("echo noop > /sys/block/sda/queue/scheduler")}'\
+'else{print "PASSED: scheduler patch is OK. \n"}'`
+echo "$OUTPUT"
+
+echo "## KERNEL PATCH CHECK|FIX:nt_request on $HOSTNAME ##"
+OUTPUT=`cat /sys/block/sda/queue/nr_requests | \
+perl -ne 'if ($_ != "512"){ print "FIXING: nt_request patch issue \n'\
+'";system("echo 512 > /sys/block/sda/queue/nr_requests")}else'\
+'{print "PASSED: nt_request patch is OK. \n"}'`
+echo "$OUTPUT"
+
+exit
+

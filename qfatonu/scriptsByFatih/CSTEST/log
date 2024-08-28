@@ -1,0 +1,144 @@
+####################################################
+ RNC01 UTRAN RELATIONS
+####################################################
+=====================================================
+ RNC01-COUNT=1 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-1-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=2 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-2-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=3 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-3-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=4 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-4-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=5 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-5-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=6 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-6-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=7 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-7-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=8 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-8-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=9 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-9-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=10 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-9-2
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=11 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-9-3
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=12 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-10-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=13 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-10-2
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=14 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-10-3
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=15 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-11-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=16 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-11-2
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=17 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-11-3
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=18 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-12-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=19 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-12-2
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=20 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-12-3
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=21 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-13-1
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=22 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-13-2
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=23 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-13-3
+=====================================================
+num_Of_Intra_Relation_Per_Cell=31
+num_Of_Inter_Relation_Per_Cell=11
+num_Of_External_Relation_Per_Cell=21
+=====================================================
+ RNC01-COUNT=24 SubNetwork=ONRM_RootMo_R,SubNetwork=RNC01,MeContext=RNC01,ManagedElement=1,RncFunction=1,UtranCell=RNC01-14-1
+=====================================================

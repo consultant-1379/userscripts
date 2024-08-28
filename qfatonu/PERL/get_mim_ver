@@ -1,0 +1,84 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use Getopt::Long;
+
+our $DEBUG = 0;
+
+main();
+
+
+sub main {
+    my ($sim,$netype);
+    my $result = GetOptions("netype=s" => \$netype,
+			    "sim=s" => \$sim,
+			    "debug=s" => \$DEBUG
+			    ); 
+    ($result == 1) or die "Invalid args";
+    if ( (! defined $sim) || (! defined $netype) ) {
+	print "Usage: get_mim_ver --sim <SIM> --netype <NETYPE>\n";
+	exit 1;
+    }
+
+    if ( ! -r "/tmp/showstarted.txt" ) { 
+	system("echo '.show started' | /netsim/inst/netsim_pipe > /tmp/showstarted.txt");
+	system("echo '.show netypes' | /netsim/inst/netsim_pipe > /tmp/netypes.txt");
+    }
+
+    
+
+    my $managledMIM = getMangled($sim,$netype,"/tmp/showstarted.txt");
+    if ( ! defined $managledMIM ) {
+	print "ERROR: No match\n";
+	exit 1;
+    }
+
+    my $fullMIM = getFullMim($managledMIM,$netype,"/tmp/netypes.txt");
+    print "$fullMIM\n";
+}
+
+sub getMangled($$$) {
+    my ($sim,$netype,$file) = @_;
+
+    my ($thisType,$thisMim);
+    my $result = undef;
+    open INPUT, $file or die "Cannot open $file";
+    while ( (! defined $result) && (my $line = <INPUT>) ) {
+	if ( $DEBUG > 9 ) { print "getMangled: line=$line"; }
+	if ( $line =~ /server_.* for \S+ (\S+) (\S+)/ ) {
+	    ($thisType,$thisMim) = ($1,$2);
+	    $thisMim =~ s/,$//;
+	    if ( $DEBUG > 8 ) { print "getMangled: thisType=$thisType thisMim=$thisMim\n"; }
+	} else {
+	    if ( (defined $thisType) && ($thisType eq $netype ) ) {
+		if ( $line =~ /-$sim/ ) {
+		    $result = $thisMim;
+		}
+	    }
+	}
+    }
+
+    close INPUT;
+
+    if ( $DEBUG > 0 ) { print "getMangled: result=", $result, "\n"; }
+    return $result;
+}
+    
+sub getFullMim($$) {
+   my ($managledMIM,$netype,$file) = @_;
+
+   open INPUT, $file or die "Cannot open $file";
+   my $result = undef;
+   while ( (! defined $result) && (my $line = <INPUT>) ) {
+       if ( $line =~ /^$netype $managledMIM .* MIM (\S+)/ ) {
+	   $result = $1;
+       }
+   }
+
+    close INPUT;
+
+    if ( $DEBUG > 0 ) { print "getFullMim: result=", $result, "\n"; }
+    return $result;
+}
